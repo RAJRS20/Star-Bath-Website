@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# Large Eva product image folder (279MB - too large for GitHub)
+public/images/Eva/
+
+# Auto-generated Eva product data
+src/data/eva.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

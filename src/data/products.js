@@ -1,5 +1,3 @@
-import evaData from './eva.json';
-
 export const categories = [
   { id: 'kitchen-sinks', name: 'Kitchen Sinks', icon: '🪣', description: 'Premium stainless steel & handmade sinks' },
   { id: 'faucets', name: 'Faucets & Taps', icon: '🚰', description: 'Basin mixers, wall mixers & sensor taps' },
@@ -13,6 +11,7 @@ export const categories = [
 export const brands = ['Jaquar', 'Parryware', 'Morcka', 'Kohler', 'Grohe', 'Hindware'];
 
 const defaultProducts = [
+
   {
     id: 1,
     name: 'Aqua Pro Workstation Sink',
@@ -183,7 +182,7 @@ const defaultProducts = [
   },
 ];
 
-export const products = [...defaultProducts, ...evaData];
+export const products = defaultProducts;
 
 export const getProductById = (id) => products.find(p => p.id === parseInt(id));
 export const getProductsByCategory = (cat) => products.filter(p => p.category === cat);
