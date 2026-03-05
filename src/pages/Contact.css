@@ -203,21 +203,44 @@
 @media (max-width: 960px) {
     .contact-layout {
         grid-template-columns: 1fr;
-        gap: 64px;
+        gap: 48px;
     }
 }
 
 @media (max-width: 600px) {
     .contact-form-wrapper {
-        padding: 32px 20px;
+        padding: 28px 20px;
     }
 
     .form-row-2 {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 0;
     }
 
     .contact-header .heading-xl {
         font-size: 2.2rem;
+    }
+
+    .contact-header {
+        margin-bottom: 40px;
+        padding-bottom: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-page {
+        padding: 100px 0 48px;
+    }
+
+    .contact-header .heading-xl {
+        font-size: 1.9rem;
+    }
+
+    .contact-header .subheading {
+        font-size: 0.95rem;
+    }
+
+    .contact-info-col {
+        gap: 32px;
     }
 }

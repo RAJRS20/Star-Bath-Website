@@ -167,7 +167,6 @@
     font-weight: 500;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
     .brands-hero-minimal .container {
         grid-template-columns: 1fr;
@@ -186,11 +185,45 @@
     }
 
     .brand-arch-card {
-        padding: 32px;
+        padding: 28px 24px;
+    }
+
+    .brand-arch-name {
+        font-size: 1.8rem;
+    }
+
+    .brands-title-large {
+        font-size: 3rem;
     }
 
     .brand-arch-footer {
         flex-wrap: wrap;
         gap: 24px;
+    }
+
+    .brand-arch-body {
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brands-hero-minimal {
+        padding: 100px 0 48px;
+    }
+
+    .brands-hero-minimal .container {
+        gap: 24px;
+    }
+
+    .brands-title-large {
+        font-size: 2.5rem;
+    }
+
+    .brands-hero-content p {
+        font-size: 1rem;
+    }
+
+    .brands-grid-section {
+        padding: 48px 0;
     }
 }

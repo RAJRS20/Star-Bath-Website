@@ -401,17 +401,38 @@
 @media (max-width: 960px) {
     .profile-layout {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 32px;
     }
 
     .profile-sidebar {
         position: static;
     }
+
+    .profile-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .profile-nav-btn {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+
+    .profile-summary {
+        display: none;
+    }
+
+    /* Hide avatar block on tablet – keep nav only */
 }
 
 @media (max-width: 600px) {
+    .profile-page {
+        padding: 100px 0 48px;
+    }
+
     .profile-section-card {
-        padding: 24px 20px;
+        padding: 20px 16px;
     }
 
     .form-row-2 {
@@ -419,15 +440,49 @@
     }
 
     .profile-header .heading-xl {
-        font-size: 2.2rem;
+        font-size: 2rem;
+    }
+
+    .profile-header {
+        margin-bottom: 40px;
+        padding-bottom: 24px;
     }
 
     .profile-wishlist-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .order-item {
         flex-direction: column;
         align-items: flex-start;
+        gap: 12px;
+    }
+
+    .order-item-right {
+        gap: 12px;
+    }
+
+    .profile-layout {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-nav {
+        gap: 6px;
+    }
+
+    .profile-nav-btn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .profile-section-title {
+        font-size: 1.4rem;
+    }
+
+    .profile-wishlist-grid {
+        grid-template-columns: 1fr;
     }
 }
