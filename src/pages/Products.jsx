@@ -89,7 +89,7 @@ export default function Products() {
                                 <SlidersHorizontal size={16} />
                                 Filters {hasFilters && <span className="filter-count">●</span>}
                             </button>
-                            <select className="form-select" value={sort} onChange={e => setSort(e.target.value)} style={{ width: 'auto', borderRadius: '99px', padding: '8px 36px 8px 16px' }}>
+                            <select className="form-select" value={sort} onChange={e => setSort(e.target.value)} style={{ width: 'auto', borderRadius: '99px', padding: '0 36px 0 16px', height: '40px' }}>
                                 {sortOptions.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
                             </select>
                         </div>

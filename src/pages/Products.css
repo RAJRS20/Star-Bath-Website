@@ -23,13 +23,15 @@
     display: flex;
     gap: 12px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .products-filter-btn {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 16px;
+    padding: 0 16px;
+    height: 40px;
     border-radius: var(--radius-full);
     border: 1px solid var(--gray-300);
     font-size: 0.85rem;

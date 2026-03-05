@@ -78,39 +78,27 @@
     transform: scale(1.03);
 }
 
-/* Quick Actions */
-.product-actions {
-    position: absolute;
-    bottom: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-    opacity: 0;
-    transition: all 0.25s ease;
-}
-
-.product-card:hover .product-actions {
-    opacity: 1;
-}
-
-.product-action-btn {
-    width: 40px;
-    height: 40px;
-    background: white;
+/* Quick Add Btn */
+.quick-add-btn {
+    width: 32px;
+    height: 32px;
+    background: var(--gray-100);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     color: var(--charcoal);
-    font-size: 0.85rem;
     transition: all 0.2s;
+    flex-shrink: 0;
 }
 
-.product-action-btn:hover {
+.product-card:hover .quick-add-btn {
     background: var(--charcoal);
-    color: white;
+    color: var(--white);
+}
+
+.quick-add-btn:hover {
+    transform: scale(1.1);
 }
 
 /* Info */
@@ -164,10 +152,16 @@
 .product-price-row {
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: space-between;
     margin-bottom: 2px;
     order: -1;
     /* Move price to top */
+}
+
+.product-price-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .product-price {
@@ -222,19 +216,6 @@
 
 /* ── Mobile Touch Fixes ── */
 @media (max-width: 900px) {
-    .product-actions {
-        opacity: 1;
-        /* Always visible on mobile/tablets without hover */
-        bottom: 8px;
-        gap: 6px;
-    }
-
-    .product-action-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 0.9rem;
-    }
-
     .product-name {
         font-size: 0.85rem;
     }

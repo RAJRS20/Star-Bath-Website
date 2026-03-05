@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
-import { Search, User, Filter, ShoppingBag, Menu, X, Home } from 'lucide-react';
+import { Search, User, Filter, ShoppingBag, Menu, X, Home, Grid, BookOpen, Phone } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
 import './Navbar.css';
 
@@ -81,14 +81,39 @@ export default function Navbar() {
                 </div>
             </div>
 
+            {/* Mobile Menu Overlay */}
+            <div className={`mobile-overlay ${mobileOpen ? 'open' : ''}`} onClick={() => setMobileOpen(false)}></div>
+
             {/* Mobile Menu */}
             <div className={`mobile-menu ${mobileOpen ? 'open' : ''}`}>
                 <div className="mobile-nav-list">
-                    <Link to="/" className={`mobile-nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={() => setMobileOpen(false)}>Home</Link>
-                    <Link to="/products" className={`mobile-nav-link ${location.pathname === '/products' && !location.search ? 'active' : ''}`} onClick={() => setMobileOpen(false)}>Shop</Link>
-                    <NavLink to="/brands" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>Brands</NavLink>
-                    <NavLink to="/about" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>Lookbook</NavLink>
-                    <NavLink to="/contact" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>Contact</NavLink>
+                    <div className="mobile-menu-header">
+                        <span className="mobile-menu-title">Menu</span>
+                        <button className="mobile-menu-close" onClick={() => setMobileOpen(false)}>
+                            <X size={20} strokeWidth={1.5} />
+                        </button>
+                    </div>
+
+                    <Link to="/" className={`mobile-nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={() => setMobileOpen(false)}>
+                        <Home size={20} className="mobile-nav-icon" strokeWidth={1.5} />
+                        Home
+                    </Link>
+                    <Link to="/products" className={`mobile-nav-link ${location.pathname === '/products' && !location.search ? 'active' : ''}`} onClick={() => setMobileOpen(false)}>
+                        <ShoppingBag size={20} className="mobile-nav-icon" strokeWidth={1.5} />
+                        Shop
+                    </Link>
+                    <NavLink to="/brands" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>
+                        <Grid size={20} className="mobile-nav-icon" strokeWidth={1.5} />
+                        Brands
+                    </NavLink>
+                    <NavLink to="/about" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>
+                        <BookOpen size={20} className="mobile-nav-icon" strokeWidth={1.5} />
+                        Lookbook
+                    </NavLink>
+                    <NavLink to="/contact" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>
+                        <Phone size={20} className="mobile-nav-icon" strokeWidth={1.5} />
+                        Contact
+                    </NavLink>
                 </div>
             </div>
         </nav>
