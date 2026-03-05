@@ -1,0 +1,32 @@
+.wishlist-page {
+    padding: 120px 0 80px;
+    min-height: 80vh;
+}
+
+.wishlist-title {
+    margin-bottom: 8px;
+}
+
+.wishlist-count {
+    color: var(--gray-500);
+    margin-bottom: 32px;
+}
+
+.wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 960px) {
+    .wishlist-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .wishlist-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}

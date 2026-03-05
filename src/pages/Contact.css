@@ -1,0 +1,223 @@
+.contact-page {
+    padding: 120px 0 80px;
+    min-height: 80vh;
+}
+
+.contact-header {
+    margin-bottom: 64px;
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 40px;
+}
+
+.contact-header .heading-xl {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.contact-header .subheading {
+    font-size: 1.1rem;
+    color: var(--gray-500);
+    max-width: 600px;
+}
+
+/* Layout */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+/* Left Column - Info */
+.contact-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.contact-block-title {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-500);
+    margin-bottom: 16px;
+}
+
+.contact-block-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s;
+}
+
+.contact-link:hover {
+    color: var(--gray-500);
+}
+
+/* Hours */
+.hours-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: var(--charcoal);
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.hours-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.hours-time.closed {
+    color: var(--gray-400);
+}
+
+/* Methods */
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.contact-method-icon {
+    color: var(--gray-500);
+    margin-top: 2px;
+}
+
+.contact-method-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    margin-bottom: 4px;
+}
+
+.contact-method-val {
+    font-size: 1rem;
+    color: var(--charcoal);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.contact-method-val:hover {
+    color: var(--gray-500);
+}
+
+/* Right Column - Form */
+.contact-form-wrapper {
+    background: var(--gray-100);
+    padding: 48px;
+}
+
+.minimal-form .form-group {
+    margin-bottom: 24px;
+}
+
+.minimal-form .form-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gray-600);
+    margin-bottom: 8px;
+}
+
+.minimal-form .form-input,
+.minimal-form .form-textarea,
+.minimal-form .form-select {
+    width: 100%;
+    background: white;
+    border: 1px solid var(--gray-200);
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    color: var(--charcoal);
+    border-radius: 0;
+    /* Sharp edges */
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+}
+
+.minimal-form .form-input:focus,
+.minimal-form .form-textarea:focus,
+.minimal-form .form-select:focus {
+    border-color: var(--charcoal);
+}
+
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* Success State */
+.form-success {
+    text-align: center;
+    padding: 64px 0;
+    background: white;
+    border: 1px solid var(--gray-200);
+}
+
+.success-emoji {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.form-success h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.form-success p {
+    color: var(--gray-500);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 960px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 64px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-form-wrapper {
+        padding: 32px 20px;
+    }
+
+    .form-row-2 {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .contact-header .heading-xl {
+        font-size: 2.2rem;
+    }
+}
